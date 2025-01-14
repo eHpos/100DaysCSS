@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MenuIcon</title>
+    <link rel="stylesheet" href="002_menu_icon.css" type="text/css">
+</head>
+<body>
+<div class="frame">
+    <div class="center">
+        <div class="menu-icon">
+            <div class="line-1 no-animation"></div>
+            <div class="line-2 no-animation"></div>
+            <div class="line-3 no-animation"></div>
+        </div>
+    </div>
+</div>
+<script>
+    const menuIcon = document.querySelector('.menu-icon');
+    menuIcon.addEventListener('click', function () {
+        // 切换 'active' 类：如果存在则移除，如果不存在则添加
+        this.classList.toggle('active');
+        const divElements = this.querySelectorAll('div');
+        divElements.forEach(function (div) {
+            div.classList.remove('no-animation');
+        });
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,85 @@
+.frame {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 400px;
+    width: 400px;
+    background: linear-gradient(to top right, #43389F 0%, #4ec6ca 100%);
+    border-radius: 3px;
+    font-family: 'Courier New', 'Courier', sans-serif;
+    color: #fff;
+}
+
+.center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.number {
+    height: 100px;
+    width: 200px;
+
+    .one-one {
+        position: absolute;
+        left: -16px;
+        height: 40px;
+        width: 20px;
+        background: #fff;
+        rotate: 50deg;
+        border-radius: 3px;
+        box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.2);
+        z-index: 10;
+    }
+
+    .one-two {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100px;
+        width: 20px;
+        background: #fff;
+        border-radius: 3px;
+        box-shadow: 0 0 13px 0 rgba(0, 0, 0, 0.2);
+        z-index: 20;
+    }
+
+    .zero-one,
+    .zero-two {
+        left: 15px;
+        position: absolute;
+        height: 100px;
+        width: 100px;
+        z-index: 15;
+        box-sizing: border-box;
+        border-radius: 50%;
+        border: 24px solid #fff;
+        box-shadow: 0 0 13px 0 rgba(0, 0, 0, 0.2);
+    }
+
+    .zero-two {
+        left: 100px;
+        z-index: 10;
+    }
+}
+
+.big {
+    font-size: 82px;
+    line-height: 60px;
+    text-transform: uppercase; /*转为大写*/
+    font-weight: 700;
+    margin-top: 6px;
+}
+
+.small {
+    font-size: 23px;
+    text-transform: uppercase; /*转为大写*/
+    font-weight: 700;
+    margin-top: 6px;
+    letter-spacing: .04em; /*字符之间添加的间距为当前字体大小的 0.04 倍。*/
+}
+
+
+

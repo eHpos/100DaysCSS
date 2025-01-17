@@ -22,5 +22,8 @@
 ### 005：[统计](./005-statistic/)
 ![Statistic](./preview/005_statistic.gif)
 
+### 006：[个人主页](./006-profile/)
+![Statistic](./preview/006_profile.gif)
+
 _（更多练习将会不断更新）_
 

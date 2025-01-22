@@ -25,5 +25,8 @@
 ### 006：[个人主页](./006-profile/)
 ![Statistic](./preview/006_profile.gif)
 
+### 007：[通知](./007-notifications/)
+![Statistic](./preview/007_notifications.gif)
+
 _（更多练习将会不断更新）_
 

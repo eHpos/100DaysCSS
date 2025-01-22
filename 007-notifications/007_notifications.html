@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>Notifications</title>
     <link rel="stylesheet" href="007_notifications.css" type="text/css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
 <body>
 <div class="frame">
@@ -17,6 +18,7 @@
                 <div class="bottom"></div>
             </div>
             <div class="title">Notifications</div>
+            <input type="text" class="search-input" placeholder="Search ...">
             <div class="search">
                 <div class="search-icon"></div>
             </div>
@@ -52,6 +54,25 @@
             </div>
         </div>
     </div>
+    <div class="menu">
+        <ul>
+            <li><span class="fa fa-dashboard"></span>Dashboard</li>
+            <li><span class="fa fa-user"></span>Profile</li>
+            <li><span class="fa fa-bell"></span>Notifications</li>
+            <li><span class="fa fa-comments"></span>Messages</li>
+            <li><span class="fa fa-gear"></span>Settings</li>
+        </ul>
+    </div>
 </div>
+<script>
+    document.querySelector('.search').addEventListener('click', function () {
+        document.querySelector('.search-input').classList.toggle('active');
+    });
+
+    document.querySelector('.menu-icon').addEventListener('click', function () {
+        document.querySelector('.panel').classList.toggle('show-menu');
+        document.querySelector('.menu').classList.toggle('active');
+    });
+</script>
 </body>
 </html>

@@ -13,11 +13,13 @@ $blue-light: #B2DAFF;
   border-radius: 2px;
   font-family: 'Arial', 'Helvetica Neue', 'Segoe UI', 'Tahoma', sans-serif;
   background: $blue-dark;
-  color: #666666
+  color: #666666;
+  overflow: hidden;
 }
 
 .panel {
   position: absolute;
+  z-index: 100;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -27,6 +29,11 @@ $blue-light: #B2DAFF;
   overflow: hidden;
   font-family: 'Arial', 'Helvetica Neue', 'Segoe UI', 'Tahoma', sans-serif;
   background: #fff;
+  transition: all .5s ease-in-out;
+
+  &.show-menu {
+    transform: translate(0,-50%);
+  }
 
   .header {
     position: relative;
@@ -96,6 +103,25 @@ $blue-light: #B2DAFF;
       font-weight: 600;
       font-size: 15px;
     }
+    
+    .search-input{
+      position: absolute;
+      border-radius: 50px;
+      border: none;
+      height: 32px;
+      width: 210px;
+      margin-left: 15px;
+      padding-left: 20px;
+      opacity: 0;
+      z-index: 0;
+      transition: all .3s ease-in-out;
+      transform: translateX(15px);
+      &.active{
+        opacity: 1;
+        z-index: 300;
+        transform: translateX(0);
+      }
+    }
 
     .search {
       display: flex;
@@ -138,20 +164,28 @@ $blue-light: #B2DAFF;
     position: absolute;
     top:0;
     bottom: 0;
-    left: 30px;
+    left: 26px;
     width: 4px;
     background: #EBEBEB;
-    z-index: 100;
+    z-index: 0;
   }
   
   .notifications{
     margin-left: 34px;
+    @for $i from 2 through 4 {
+      &:nth-child(#{$i}) {
+        animation: here-am-i .5s ease-out ($i/5 + s);
+        animation-fill-mode: both;
+      }
+    }
+    
     .notification{
       .nt-title {
+        z-index: 200;
         margin-top: 10px;
         display: flex;
         .circle {
-          margin-left: -9px;
+          margin-left: -13px;
           height: 10px;
           width: 10px;
           background: #fff;
@@ -161,19 +195,82 @@ $blue-light: #B2DAFF;
         }
 
         .time {
-          margin-left: 10px;
+          margin-left: 6px;
           font-size: 12px;
         }
       }
       .message{
-        margin:4px 0 24px 15px;
+        margin:4px 0 24px 7px;
         font-size: 15px;
         line-height: 20px;
         b{
           font-weight: 6000;
         }
       }
+      &:hover{
+        color: $blue;
+      }
     }
+  }
+}
+
+.menu{
+  position: absolute;
+  width: 170px;
+  height: 270px;
+  top: 65px;
+  left: 50px;
+  background: #43627D;
+  border-radius: 3px;
+  z-index: 0;
+  transition: all .5s ease-in-out;
+  transform: translate(20px,0);
+  
+  &.active {
+    box-shadow: 5px 5px 8px 0 rgba(0,0,0,0.2);
+    transform: translate(0,0);
+  }
+  
+  ul {
+    margin: 0;
+    padding: 10px 0;
+  }
+
+  li {
+    color: #93B2CD;
+    margin: 0;
+    padding: 18px 17px;
+    list-style: none; //移除原点
+    font-size: 14px;
+    line-height: 14px;
+    cursor: pointer;
+
+    &:hover {
+      color: #fff;
+      background: #385269;
+    }
+
+    span {
+      display: block;
+      float: left;
+      margin-right: 8px;
+      margin-top: -1px;
+    }
+
+    .fa-gear, .fa-user, .fa-bell {
+      margin-top: 0;
+    }
+  }
+}
+
+@keyframes here-am-i {
+  from {
+    transform: translate3d(0,50px,0);
+    opacity: 0;
+  }
+  to {
+    transform: translate3d(0,0,0);
+    opacity: 1;
   }
 }
 

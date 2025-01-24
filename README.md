@@ -23,10 +23,13 @@
 ![Statistic](./preview/005_statistic.gif)
 
 ### 006：[个人主页](./006-profile/)
-![Statistic](./preview/006_profile.gif)
+![Profile](./preview/006_profile.gif)
 
 ### 007：[通知](./007-notifications/)
-![Statistic](./preview/007_notifications.gif)
+![Notifications](./preview/007_notifications.gif)
+
+### 008：[元球](./008-metaballs/)
+![MetaBalls](./preview/008_metaballs.gif)
 
 _（更多练习将会不断更新）_
 

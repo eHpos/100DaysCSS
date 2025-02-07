@@ -31,5 +31,7 @@
 ### 008：[元球](./008-metaballs/)
 ![MetaBalls](./preview/008_metaballs.gif)
 
+### 009：[雨夜](./009-rainy-night/)
+![RainyNight](./preview/009_rainy_night.gif)
 _（更多练习将会不断更新）_
 

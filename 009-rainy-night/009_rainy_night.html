@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>RainyNight</title>
+    <link rel="stylesheet" href="009_rainy_night.css" type="text/css">
+</head>
+<body>
+<div class="frame">
+    <div class="moon">
+        <script>
+            for (let i = 1; i <= 11; i++) {
+                let crater = document.createElement('div');
+                crater.className = `crater crater-${i}`;
+                document.querySelector('.moon').appendChild(crater);
+            }
+        </script>
+    </div>
+    <div class="hill-bg-1"></div>
+    <div class="hill-bg-2"></div>
+    <div class="hill-fg-1"></div>
+    <div class="hill-fg-2"></div>
+    <div class="hill-fg-3"></div>
+    <div class="front">
+        <div class="temperature">12°</div>
+        <div class="info">Wind: E 7 km/h <br/> Humidity: 87%</div>
+        <table class="preview">
+            <tr><td>Tue</td><td>21° / 9°</td></tr>
+            <tr><td>Wed</td><td>23° / 10°</td></tr>
+        </table>
+    </div>
+    <script>
+        function createDrops(type, count) {
+            for (let i = 1; i <= count; i++) {
+                let drop = document.createElement('div');
+                drop.className = `drop ${type}-${i}`;
+                document.querySelector('.frame').appendChild(drop);
+            }
+        }
+        createDrops('drop-big', 10);
+        createDrops('drop-medium', 10);
+        createDrops('drop-small', 10);
+    </script>
+</div>
+</body>
+</html>

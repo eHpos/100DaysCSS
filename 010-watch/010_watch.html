@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Watch</title>
+    <link rel="stylesheet" href="010_watch.css" type="text/css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+<div class="frame">
+    <div class="center">
+        <script>
+            for (let i = 1; i <= 15; i++) {
+                let pointSet = document.createElement('div');
+                pointSet.className = `point-set-${i}`;
+
+                for (let j = 1; j <= 4; j++) {
+                    let point = document.createElement('div');
+                    point.className = `point-${j}`;
+                    pointSet.appendChild(point);
+                }
+                document.querySelector('.center').appendChild(pointSet);
+            }
+        </script>
+        <svg class="spinner" viewBox="0 0 202 202" xmlns="https://www.w3.org/2000/svg">
+            <!-- 圆心位置在 (101, 101)，即视图区域的中心，半径为 99.5-->
+            <circle cx="101" cy="101" r="99.5"></circle>
+        </svg>
+        <div class="date">Mon 15 Jan 2015</div>
+        <div class="time">11:42</div>
+        <div class="beat"><span class="fa fa-heart"></span> 81</div>
+        <div class="energy">1248 kcal</div>
+    </div>
+</div>
+</body>
+</html>

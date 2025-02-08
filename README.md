@@ -33,5 +33,9 @@
 
 ### 009：[雨夜](./009-rainy-night/)
 ![RainyNight](./preview/009_rainy_night.gif)
+
+### 010：[手表](./010-watch/)
+![Watch](./preview/010_watch.gif)
+
 _（更多练习将会不断更新）_
 

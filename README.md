@@ -37,5 +37,8 @@
 ### 010：[手表](./010-watch/)
 ![Watch](./preview/010_watch.gif)
 
+### 011：[步行靴](./011-walking-boots/)
+![WalkingBoots](./preview/011_walking_boots.gif)
+
 _（更多练习将会不断更新）_
 

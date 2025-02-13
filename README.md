@@ -40,5 +40,8 @@
 ### 011：[步行靴](./011-walking-boots/)
 ![WalkingBoots](./preview/011_walking_boots.gif)
 
+### 012：[提示框](./012-tooltip/)
+![Tooltip](./preview/012_tooltip.gif)
+
 _（更多练习将会不断更新）_
 
